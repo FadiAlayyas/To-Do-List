@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  todoapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todoapi
+    ports:
+      - "5000:8080"
+    depends_on:
+      - mssql
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - todo-network
+    restart: unless-stopped
+
+  mssql:
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: sql2
+    hostname: mssql
+    environment:
+      - SA_PASSWORD=Dotnet123!
+      - ACCEPT_EULA=Y
+    restart: unless-stopped
+    ports:
+      - "1401:1433"
+    networks:
+      - todo-network
+
+volumes:
+  sql_data:
+
+networks:
+  todo-network:
+    driver: bridge

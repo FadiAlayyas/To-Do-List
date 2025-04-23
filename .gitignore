@@ -1,0 +1,94 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+.history/
+
+# Rider settings (if used)
+.idea/
+*.sln.iml
+
+# Dotnet publish
+*.dbmdl
+*.bak
+*.log
+*.vspscc
+*.vssscc
+
+# Dotnet environment secrets
+secrets.json
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Docker-related
+**/*.dockerfile
+docker-compose.override.yml
+docker-compose.override.*.yml
+
+# Ignore Docker volumes (optional)
+volumes/
+
+# Entity Framework Migrations metadata
+Migrations/
+
+# Logs
+*.log
+logs/
+*.tlog
+
+# NPM (if using with frontend)
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+
+# Coverage tools
+coverage/
+*.coveragexml
+*.codecoverage
+*.lcov
+.nyc_output/
+
+# LocalDB
+*.mdf
+*.ldf
+
+# JetBrains Rider & ReSharper
+.ReSharper*/
+*_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio Code snippets
+*.code-snippets
+
+# Application insights
+ApplicationInsights.config
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+
+# Ignore generated launchSettings.json if you regenerate it often
+# Properties/launchSettings.json
+
+.fake
